@@ -12,9 +12,6 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         //
-        $middleware->validateCsrfTokens(except: [
-            '/list_of_books',
-        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
