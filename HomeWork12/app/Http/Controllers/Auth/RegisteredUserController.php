@@ -52,7 +52,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        $email = 'stalker78m@yandex.ru';
+        $email = 'user@yandex.ru';
         // Mail::to($email)->send(new Welcome($request->name));
         Mail::to($email)->send(new Welcome($user));
         Telegram::sendMessage([
